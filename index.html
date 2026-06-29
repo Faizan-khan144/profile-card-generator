@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-box">
+
+        <h1>Create Your Card</h1>
+        <p>Fill in your details below and watch your profile card update in real time.</p>
+
+        <div class="input-group">
+
+            <div class="field">
+                <label>Profile Image</label>
+                <input type="file" id="imageInput" accept="image/*">
+            </div>
+
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="John Doe">
+            </div>
+
+            <div class="field">
+                <label>Job Title</label>
+                <input type="text" id="job" placeholder="Frontend Developer">
+            </div>
+
+            <div class="field">
+                <label>Bio</label>
+                <textarea id="bio" placeholder="Write something about yourself..."></textarea>
+            </div>
+
+            <div class="row-2">
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="john@email.com">
+                </div>
+                <div class="field">
+                    <label>Phone</label>
+                    <input type="text" id="phone" placeholder="+92 3000000000">
+                </div>
+            </div>
+
+            <div class="row-2">
+                <div class="field">
+                    <label>Location</label>
+                    <input type="text" id="location" placeholder="Karachi">
+                </div>
+                <div class="field">
+                    <label>Accent Color</label>
+                    <input type="color" id="color" value="#4f46e5">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Skills (Comma Separated)</label>
+                <input type="text" id="skills" placeholder="HTML, CSS, JavaScript, React">
+            </div>
+
+            <div class="field">
+                <label>Website</label>
+                <input type="text" id="website" placeholder="https://yoursite.com">
+            </div>
+
+            <div class="row-2">
+                <div class="field">
+                    <label>GitHub</label>
+                    <input type="text" id="github" placeholder="https://github.com/">
+                </div>
+                <div class="field">
+                    <label>LinkedIn</label>
+                    <input type="text" id="linkedin" placeholder="https://linkedin.com/">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Instagram</label>
+                <input type="text" id="instagram" placeholder="https://instagram.com/">
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <button id="generateBtn">Generate Card</button>
+            <button id="downloadPNG">Download PNG</button>
+            <button id="downloadPDF">Download PDF</button>
+            <button id="resetBtn">Reset</button>
+            <button id="themeBtn">Dark Mode</button>
+        </div>
+
+    </div>
+
+    <div class="preview">
+
+        <div class="card" id="card">
+
+            <div class="top"></div>
+
+            <img
+                src=""
+                id="cardImage"
+                class="profile"
+                alt="Profile"
+            >
+
+            <h2 id="cardName">Your Name</h2>
+            <h4 id="cardJob">Frontend Developer</h4>
+
+            <p id="cardBio">Your bio will appear here...</p>
+
+            <div class="divider"></div>
+
+            <div class="info">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span id="cardEmail">example@email.com</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span id="cardPhone">+92 300 0000000</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="cardLocation">Pakistan</span>
+                </div>
+            </div>
+
+            <p class="section-label">Skills</p>
+
+            <div id="skillContainer" class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <p class="section-label">Connect</p>
+
+            <div class="social">
+                <a id="websiteLink" href="#" target="_blank">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+                <a id="githubLink" href="#" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a id="linkedinLink" href="#" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a id="instagramLink" href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
